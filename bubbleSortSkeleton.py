@@ -25,7 +25,10 @@ def less(a, b):
     # devuelve un boolean
     # recibe dos elementos
     # ojo a si el algoritmo de ordenacion es estable o inestable
-    
+    if a  < b:
+        return True
+    else:
+        return False
 
 
 def exchange(lista, i, j):
@@ -33,13 +36,22 @@ def exchange(lista, i, j):
     # recibe la lista, la posicion i y la posicion j
     # devuelve None
     # comprueba que se han intercambiado los elementos
+    elementoAnteriorI = lista[i]
+    elementoAnteriorJ = lista[j]
+
+    lista[i], lista[j] = j, i
+
+    if elementoAnteriorJ==lista[i] and elementoAnteriorI==lista[j]:
+        return None
+
 
 
 def isExchanged(lista, i, j):
     # comprueba si el elemento en la posicion i
     # es menor que el elemento en la posicion j
     # devuelve un boolean
-
+    if lista[i] < lista[j]:
+        return True
 
 def isSorted(lista):
     # comprueba si la lista esta oredenada
